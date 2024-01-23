@@ -1,0 +1,1 @@
+This folder stores JDK11 test cases, test scripts, and test guide documents.

@@ -1,0 +1,1 @@
+This folder stores JDK17 test cases, test scripts, and test guide documents.
