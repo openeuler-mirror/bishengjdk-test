@@ -38,13 +38,13 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 public class AESBenchmark extends BenchmarkBase {
 
-    @Param({"AES/ECB/PKCS5Padding", "AES/ECB/NoPadding", "AES/CBC/NoPadding", "AES/CBC/PKCS5Padding", "AES/CTR/NoPadding"})
+    @Param({"AES/ECB/NoPadding", "AES/CBC/NoPadding", "AES/CTR/NoPadding"})
     private String algorithm;
 
-    @Param({"128", "192", "256"})
+    @Param({"256"})
     private int keyLength;
 
-    @Param({"" + 16 * 1024, "" + 32 * 1024, "" + 64 * 1024, "" + 128 * 1024})
+    @Param({"" + 8 * 1024})
     private int dataSize;
 
     private byte[][] encryptedData;

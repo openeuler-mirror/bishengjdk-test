@@ -37,10 +37,10 @@ import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 
 public class RSACipherBenchmark extends BenchmarkBase {
-    @Param({"RSA/ECB/NoPadding", "RSA/ECB/PKCS1Padding", "RSA/ECB/OAEPPadding"})
+    @Param({"RSA/ECB/NoPadding", "RSA/ECB/PKCS1Padding"})
     private String algorithm;
 
-    @Param({ "1024", "2048", "4096"})
+    @Param({"2048"})
     private int keyLength;
 
     private byte[][] data;
