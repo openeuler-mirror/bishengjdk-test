@@ -45,12 +45,12 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.SECONDS)
 @Warmup(iterations = 3, time = 10, timeUnit = TimeUnit.SECONDS)
-@Measurement(iterations = 5, time = 10, timeUnit = TimeUnit.SECONDS)
-@Fork(jvmArgsPrepend = {"-XX:+AlwaysPreTouch"}, value = 5)
+@Measurement(iterations = 3, time = 5, timeUnit = TimeUnit.SECONDS)
+@Fork(jvmArgsPrepend = {"-XX:+AlwaysPreTouch"}, value = 1)
 @Threads(1)
 @State(Scope.Thread)
 public class BenchmarkBase {
-    public static final int SET_SIZE = 128;
+    public static final int SET_SIZE = 32;
 
     byte[][] data;
     int index = 0;

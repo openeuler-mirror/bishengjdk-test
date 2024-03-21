@@ -45,10 +45,10 @@ public class RSAPSSSignatureBenchmark extends BenchmarkBase {
     @Param({"SHA-1", "SHA-256", "SHA-384"})
     private String algorithm;
 
-    @Param({"2048", "4096"})
+    @Param({"2048"})
     private int keySize;
 
-    @Param({"" + 16 * 1024, "" + 32 * 1024, "" + 64 * 1024, "" + 128 * 1024})
+    @Param({"" + 4 * 1024})
     private int dataSize;
 
     private KeyPair keyPair;

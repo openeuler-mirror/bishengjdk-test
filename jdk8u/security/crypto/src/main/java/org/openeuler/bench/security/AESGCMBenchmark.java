@@ -48,10 +48,10 @@ public class AESGCMBenchmark extends BenchmarkBase{
     @Param({"AES/GCM/NoPadding","AES/GCM/PKCS5Padding"})
     private String algorithm;
 
-    @Param({"128", "192", "256"})
+    @Param({"256"})
     private int keyLength;
 
-    @Param({ "" + 16 * 1024, "" + 32 * 1024, "" + 64 * 1024, "" + 128 * 1024})
+    @Param({ "" + 4 * 1024})
     private int dataSize;
 
     byte[] data;

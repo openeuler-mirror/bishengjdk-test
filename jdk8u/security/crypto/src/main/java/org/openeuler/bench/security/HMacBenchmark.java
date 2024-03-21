@@ -38,10 +38,10 @@ import javax.crypto.Mac;
 
 public class HMacBenchmark extends BenchmarkBase {
 
-    @Param({"HmacMD5", "HmacSHA1", "HmacSHA256", "HmacSHA384", "HmacSHA512"})
+    @Param({"HmacMD5", "HmacSHA1", "HmacSHA256", "HmacSHA512"})
     private String algorithm;
 
-    @Param({"" + 16 * 1024, "" + 32 * 1024, "" + 64 * 1024, "" + 128 * 1024})
+    @Param({"" + 4 * 1024})
     private int dataSize;
 
     private Mac mac;

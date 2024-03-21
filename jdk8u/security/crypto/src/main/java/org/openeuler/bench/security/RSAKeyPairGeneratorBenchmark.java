@@ -36,7 +36,7 @@ public class RSAKeyPairGeneratorBenchmark extends BenchmarkBase {
     @Param({"RSA"})
     private String algorithm;
 
-    @Param({"512", "1024", "2048", "4096"})
+    @Param({"2048"})
     private int keySize;
 
     private KeyPairGenerator keyPairGenerator;
@@ -51,7 +51,7 @@ public class RSAKeyPairGeneratorBenchmark extends BenchmarkBase {
     public KeyPair generateKeyPair() throws Exception {
         return keyPairGenerator.generateKeyPair();
     }
-    
+
     private KeyPairGenerator createKeyPairGenerator() throws Exception {
         return KeyPairGenerator.getInstance(algorithm);
     }
